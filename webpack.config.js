@@ -6,6 +6,7 @@ const {
 const moduleFederationConfig = withModuleFederationPlugin({
   remotes: {
     mfShopping: "http://localhost:4201/remoteEntry.js",
+    mfPayment: "http://localhost:4202/remoteEntry.js",
   },
 
   shared: {
