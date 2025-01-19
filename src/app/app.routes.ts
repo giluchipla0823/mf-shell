@@ -1,8 +1,8 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
+import { Routes } from '@angular/router';
+
+export const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
@@ -22,9 +22,3 @@ const routes: Routes = [
       }).then((m) => m.PaymentComponent),
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
