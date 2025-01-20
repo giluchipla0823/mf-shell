@@ -5,10 +5,13 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
+    /* loadChildren: () =>
       loadRemoteModule('mfShopping', './ProductsModule').then(
         (m) => m.ProductsModule
-      ),
+      ), */
+
+    loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent),
   },
   {
     path: 'payment',
