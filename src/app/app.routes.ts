@@ -10,9 +10,14 @@ export const routes: Routes = [
         (m) => m.ProductsModule
       ), */
 
+    /* loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent), */
     loadComponent: () =>
-      import('./home/home.component').then((m) => m.HomeComponent),
+      loadRemoteModule('mfShopping', './ProductsComponent').then(
+        (m) => m.ProductsComponent
+      ),
   },
+
   {
     path: 'payment',
     loadComponent: () =>
